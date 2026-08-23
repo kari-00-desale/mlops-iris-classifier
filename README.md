@@ -4,6 +4,8 @@ A sample Machine Learning project for learning Git version control.
 
 The training script prints accuracy and a classification report for the Iris dataset.
 
+This project uses Git branches and pull requests to manage changes safely.
+
 ## Setup
 
 ```bash
