@@ -1,0 +1,5 @@
+The contents of the file `dvc-dataset-versioning/data/.gitkeep` should be as follows:
+
+# This file is intentionally left blank. 
+
+This file is used to ensure that the `data` directory is tracked by Git, even if it is empty.
