@@ -1,0 +1,11 @@
+Here are the contents for the file `dvc-dataset-versioning/dvc.yaml`:
+
+stages:
+  prepare_data:
+    cmd: python src/prepare_data.py
+    deps:
+      - data/input_data.csv
+    outs:
+      - data/processed_data.csv
+
+This `dvc.yaml` file defines a single stage called `prepare_data`, which runs the command to execute the data preparation script. It specifies the input dependency (`data/input_data.csv`) and the output file (`data/processed_data.csv`) that will be generated after running the command.

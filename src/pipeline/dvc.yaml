@@ -1,0 +1,30 @@
+
+stages:
+  collect:
+    cmd: python src/pipeline/collect.py
+    deps:
+      - src/pipeline/collect.py
+    outs:
+      - data/raw/iris_raw.csv
+
+  preprocess:
+    cmd: python src/pipeline/preprocess.py
+    deps:
+      - src/pipeline/preprocess.py
+      - data/raw/iris_raw.csv
+    outs:
+      - data/processed/iris_preprocessed.csv
+
+  features:
+    cmd: python src/pipeline/features.py
+    deps:
+      - src/pipeline/features.py
+      - data/processed/iris_preprocessed.csv
+    outs:
+      - data/processed/iris_features.csv
+
+  validate:
+    cmd: python src/pipeline/validate.py
+    deps:
+      - src/pipeline/validate.py
+      - data/processed/iris_features.csv

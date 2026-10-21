@@ -1,0 +1,4 @@
+*.csv
+*.log
+*.tmp
+data/processed_data.csv
